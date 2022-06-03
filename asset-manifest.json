@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/world-population/static/css/main.d2b51e4c.css",
+    "main.js": "/world-population/static/js/main.c717f24b.js",
+    "index.html": "/world-population/index.html",
+    "main.d2b51e4c.css.map": "/world-population/static/css/main.d2b51e4c.css.map",
+    "main.c717f24b.js.map": "/world-population/static/js/main.c717f24b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d2b51e4c.css",
+    "static/js/main.c717f24b.js"
+  ]
+}

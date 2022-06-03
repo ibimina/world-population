@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./Header";
+import Main from "./Main";
 
 function App() {
+ const tenHighestPopulation = [
+   { country: "World", population: 7693165599 },
+   { country: "China", population: 1377422166 },
+   { country: "India", population: 1295210000 },
+   { country: "USA", population: 323947000 },
+   { country: "Indonesia", population: 258705000 },
+   { country: "Brazil", population: 206135893 },
+   { country: "Pakistan", population: 194125062 },
+   { country: "Nigeria", population: 186988000 },
+   { country: "Bangladesh", population: 161006790 },
+   { country: "Russian", population: 146599183 },
+   { country: "Japan", population: 126960000 },
+ ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header title="30 Days Of React" subtitle="World population" heading="World most populated countries"/>
+      <Main tenHighestPopulation={tenHighestPopulation}  />
     </div>
   );
 }

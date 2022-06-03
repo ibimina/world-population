@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# 30days of React- day 06 Exercise level 2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [30 days of React day 6 exercise level 2 question two](https://github.com/Asabeneh/30-Days-Of-React/blob/master/06_Day_Map_List_Keys/06_map_list_keys.md). This exercise challenges help you improve your react coding skills by building projects.
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Proud of this](#proud-of-this)
+  - [Continued development](#continued-development)
+- [Author](#author)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### The challenge
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Users should be able to:
 
-### `npm test`
+- View the optimal layout for the site depending on their device's screen size
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshot
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![mobile](Capture031.png)
+![Tablet](Capture032.png)
+![Desktop](Capture033.png)
+### Links
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Solution URL: (https://github.com/ibimina/world-population)
+- Live Site URL: (https://ibimina.github.io/world-population/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## My process
 
-### `npm run eject`
+### Built with
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Create react app
+-  created and export Header component using props
+- created and export Main component using props to map out array data
+- Rendered App component
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Proud of this
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+I used this function to set the list  maxWidth using the given array
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```jsx
+const len = props.tenHighestPopulation.map((pop) => (
+  <li
+    key={pop.country}
+    style={{ maxWidth: (Number(pop.population)/ Number(popWidth)).toFixed(3) * 100 +'%'}}
+    className="bar"
+  >
+    {/* {" "}
+    {((Number(pop.population) / Number(popWidth)) * 100).toFixed(1)}
+    {"% "} */}
+  </li>
+));
 
-## Learn More
+```
+This maps out the props population to the li tag and  sets it to a localestring to add commas to the population number
+```jsx
+ const populationList = props.tenHighestPopulation.map((pop) => (
+    <li key={pop.population} className="population">{pop.population.toLocaleString("en-US")}</li>
+  ));
+```
+### Continued development
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+React framework
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Resource
+I used this resource to learn how to add commas to numbers
+- [Resource](https://code-boxx.com/add-comma-to-numberd-javascript/) 
 
-### Code Splitting
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Ibimina Hart
+ - Frontend Mentor - [ibimina](https://www.frontendmentor.io/profile/ibimina)
+- Twitter - [ibiminaaH](https://www.twitter.com/ibiminaaH)
